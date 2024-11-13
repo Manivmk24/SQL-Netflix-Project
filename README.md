@@ -203,15 +203,4 @@ Instagram: Follow me for daily tips and updates
 LinkedIn: Connect with me professionally
 Discord: Join our community to learn and grow together
 Thank you for your support, and I look forward to connecting with you!
-SELECT 
-    category,
-    COUNT(*) AS content_count
-FROM (
-    SELECT 
-        CASE 
-            WHEN description ILIKE '%kill%' OR description ILIKE '%violence%' THEN 'Bad'
-            ELSE 'Good'
-        END AS category
-    FROM netflix
-) AS categorized_content
-GROUP BY category;
+
